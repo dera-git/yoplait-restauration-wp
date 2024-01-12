@@ -1,0 +1,166 @@
+.kl-banner-header{
+    background: $red;
+    color: $white;
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+    .kl-banner-content-left{
+        display: flex;
+        font-family: $font_third;
+        padding: 8px 0;
+        p{
+            font-size: 16px;
+            font-weight: $medium;
+            margin: 0 15px 0 0;
+            @include media-breakpoint-down(xl){
+                font-size: 14px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: $white;
+            font-size: 16px;
+            font-weight: $regular;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                color: $yellow;
+                transition: all 0.3s ease-in-out;
+            }
+            @include media-breakpoint-down(xl){
+                font-size: 14px;
+            }
+        }
+    }
+    .kl-banner-content-center{
+        padding: 8px 0;
+        a{
+            text-decoration: none;
+            margin: 0 7px;
+        }
+    }
+    .kl-banner-content-right{
+        font-family: $font_second;
+        display: flex;
+        .kl-search{
+            border: 0;
+            background: transparent;
+            outline: none;
+            box-shadow: none;
+            margin-right: 20px;
+            @include media-breakpoint-down(xl){
+                margin-right: 10px;
+            }
+        }
+        .kl-link-banner-right{
+            text-decoration: none;
+            color: $white;
+            font-size: 14px;
+            font-weight: $medium;
+            line-height: 21px;
+            background: $red_primary;
+            padding: 12px;
+            transition: all 0.3s ease-in-out;
+            @include media-breakpoint-down(xl){
+                font-size: 12px;
+            }
+            &:hover{
+                background: $red_secondary;
+                color: $yellow;
+                transition: all 0.3s ease-in-out;
+            }
+            &.active{
+                background: $red_secondary;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+.kl-navbar-nav{
+    font-family: $font_first;
+    margin: 0 auto;
+    align-items: center;
+    @include media-breakpoint-down(md){
+        align-items: initial;
+        margin: 10px auto;
+    }
+    .nav-item{
+        margin: 0 24px 0 24px;
+        @include media-breakpoint-down(xl){
+            margin: 0 12px 0 12px;
+        }
+        @include media-breakpoint-down(md){
+            margin: 10px 0 !important;
+        }
+        &:first-child{
+            margin: 0 12px 0 0;
+            @include media-breakpoint-down(xl){
+                margin: 0 12px 0 0;
+            }
+        }
+        &:last-child{
+            margin: 0 0 0 24px;
+            @include media-breakpoint-down(xl){
+                margin: 0 0 0 12px;
+            }
+        }
+        .nav-link{
+            font-size: 16px;
+            font-weight: $bold;
+            color: $black_primary;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+            @include media-breakpoint-down(xl){
+                font-size: 12px;
+            }
+            @include media-breakpoint-down(md){
+                font-size: 16px;
+                text-align: center;
+            }
+            &:hover, &.active{
+                color: $red;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        &.active{
+            .nav-link{
+                color: $red;
+            }
+        }
+    }
+}
+.kl-logo-desktop{
+    .nav-link{
+        font-size: 0 !important;
+    }
+}
+.kl-navbar-toggler{
+    border: 0;
+    padding: 0;
+    outline: none;
+    &:focus, &:focus-visible {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+    }
+    .kl-icon-menu rect{
+        transition: all 0.3s ease-in-out;
+    }
+    &[aria-expanded="true"]{
+        .kl-icon-menu rect:nth-child(3){
+          -webkit-transform: rotate(-45deg) translate(-28px, 28px);
+          -moz-transform: rotate(-45deg) translate(-28px, 28px);
+          -o-transform: rotate(-45deg) translate(-28px, 28px);
+          transform: rotate(-45deg) translate(-28px, 28px);
+        }
+        .kl-icon-menu rect:nth-child(2){
+          transition: opacity 0.2s linear;
+          opacity: 0;
+        }
+        .kl-icon-menu rect:nth-child(4){
+          -webkit-transform: rotate(45deg) translate(13px, -43px);
+          -moz-transform: rotate(45deg) translate(13px, -43px);
+          -o-transform: rotate(45deg) translate(13px, -43px);
+          transform: rotate(45deg) translate(13px, -43px);
+        }
+      }
+}

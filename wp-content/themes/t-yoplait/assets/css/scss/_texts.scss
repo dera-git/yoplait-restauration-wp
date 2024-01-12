@@ -1,0 +1,17 @@
+.kl-text- {
+  &36{
+    h2, h3{
+      @include text_36;
+      font-weight: $semi_bold;
+    }
+  }
+  &20 {
+    @include text_20();
+  }
+  &18 {
+    @include text_18();
+  }
+  &16 {
+    @include text_16();
+  }
+}

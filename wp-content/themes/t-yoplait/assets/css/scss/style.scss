@@ -1,0 +1,36 @@
+@import "breakpoint";
+@import "fonts";
+@import "variable";
+@import "utilities";
+@import "mixin";
+@import "texts";
+@import "form";
+@import "mask";
+@import "global";
+@import "cards";
+@import "header";
+@import "footer";
+
+@import "pages/home";
+@import "pages/game_panier";
+@import "pages/produit";
+@import "pages/outils";
+@import "pages/recettes";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/mentions_legales";
+@import "pages/single_recette";
+@import "pages/register";
+
+@import "responsive";
+
+body{
+  & > .kl-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .kl-footer{
+    margin-top: auto;
+  }
+}

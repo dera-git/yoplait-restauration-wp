@@ -1,0 +1,227 @@
+.kl-section-single-recette-hero{
+  position: relative;
+  z-index: 1;
+  .kl-img-hero{
+    width: 100%;
+    object-fit: cover;
+    @include mask_img('../img/single_recette/hero_single_recette.png', 100%, 100%);
+    max-height: 900px;
+    min-height: 300px;
+    object-position: center;
+  }
+  .kl-list-timing{
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+  }
+  .kl-decor-hero{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(60%);
+    z-index: -1;
+    @include media-breakpoint-down(lg){
+      max-width: 70%;
+    }
+    @include media-breakpoint-up(xxl_1600){
+      transform: translateY(75%);
+    }
+  }
+}
+
+.kl-section-single-recette-description{
+  padding: 60px 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  @include media-breakpoint-down(xl){
+    padding: 80px 0 0;
+  }
+  @include media-breakpoint-down(xs){
+    .kl-title-48{
+      h1{
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+.kl-single-recette-content-step{
+  position: relative;
+  padding-bottom: 90px;
+  @include media-breakpoint-down(xl){
+    padding-bottom: 60px;
+  }
+  @include media-breakpoint-down(md){
+    padding-bottom: 30px;
+  }
+  .kl-decor-petal-right{
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(65%, -50%);
+    @media (min-width: 1700px){
+      transform: translate(60%, -50%);
+    }
+  }
+}
+
+.kl-title-24-custom{
+  h6{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    @include media-breakpoint-down(sm){
+      font-size: 1rem;
+    }
+  }
+}
+
+.kl-title-24-not-resp{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  h6{
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+
+.kl-text-20-not-resp{
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  h6{
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+}
+
+.kl-list-ingredient{
+  padding-left: 32px;
+  li{
+    font-size: 1rem;
+    font-weight: $medium;
+    font-family: $font_first;
+    line-height: 1.2em;
+    strong{
+      font-weight: $semi_bold;
+    }
+    &:before{
+      display: inline-block;
+      content: "";
+      width: 13px;
+      height: 12px;
+      margin-right: 16px;
+      background: url(../img/icon/icon-graine.svg) no-repeat center;
+      top: -1px;
+      position: relative;
+    }
+    & + li{
+      margin-top: 16px;
+    }
+  }
+}
+
+.kl-title-icon-step{
+  display: flex;
+  align-items: center;
+  .kl-icon{
+    flex: 0 0 auto;
+    margin-right: 18px;
+  }
+}
+
+.kl-row-step-single-recette{
+  .kl-img-right{
+    filter: drop-shadow(4px 12px 20px rgba(0, 0, 0, 0.1));
+    transform: rotate(11.16deg);
+  }
+}
+
+.kl-list-timing{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 19px 40px;
+  @include media-breakpoint-down(md){
+    padding: 19px 25px;
+  }
+  .kl-col{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: url(../img/single_recette/separator-point.svg) no-repeat center;
+      left: -4px;
+    }
+    &:first-of-type{
+      &:before{
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(md){
+      &:nth-of-type(2){
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+  .kl-title{
+    font-size: 1.125rem;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+    font-weight: $medium;
+  }
+  .kl-list-icon{
+    font-size: 1.125rem;
+    line-height: 1.4em;
+    font-weight: $medium;
+  }
+  .kl-list-device{
+    overflow: hidden;
+    white-space: nowrap;
+    .kl-device{
+      margin-right: 4px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxs){
+    .kl-title{
+      font-size: 0.875rem;
+      line-height: 1.2em;
+    }
+    .kl-list-icon{
+      font-size: 0.875rem;
+      line-height: 1.42;
+    }
+  }
+}
+
+.kl-section-single-recette-actus{
+  padding: 10px 0 82px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .kl-decor-bg{
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    max-height: 70%;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+      width: 100%;
+      object-position: top;
+    }
+  }
+}
+.kl-list-ingredients{
+  padding-right:15px;
+}

@@ -1,0 +1,125 @@
+.kl-section-contact{
+  padding: 70px 0 64px;
+}
+
+.kl-contact-form-row{
+  box-shadow: 0 10px 80px -48px rgba(56, 0, 3, 0.25);
+  border-radius: 24px;
+  overflow: hidden;
+  .kl-contact-form-left{
+    padding: 48px 54px;
+  }
+  .kl-contact-form-right{
+    padding: 36px 40px;
+  }
+  .kl-img-contact{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include media-breakpoint-down(sm){
+    .kl-contact-form-left{
+      padding: 30px 16px;
+    }
+    .kl-contact-form-right{
+      padding: 30px 16px;
+    }
+  }
+}
+
+.kl-list-icon{
+  .kl-list-link{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    @include text_16;
+    font-weight: $regular;
+    word-break: break-word;
+    .kl-icon{
+      flex: 0 0 auto;
+    }
+    @include media-breakpoint-down(sm){
+      .kl-icon{
+        width: 24px;
+      }
+    }
+  }
+}
+
+.kl-sect-contact-end{
+  padding: 55px 0 0;
+  background: url(../img/contact/bg1.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left;
+  position: relative;
+  overflow: hidden;
+  @include media-breakpoint-down(lg){
+    background: transparent;
+  }
+  .kl-content-text{
+    margin-top: 80px;
+    font-family: $font_second;
+    @include media-breakpoint-down(md){
+      margin-top: 40px;
+    }
+    p{
+      font-size: 24px;
+      font-weight: $regular;
+      margin: 0;
+      text-align: center;
+      color: $black;
+    }
+  }
+  .kl-content-img{
+    text-align: end;
+    margin-bottom: -26px;
+    position: relative;
+    z-index: 1;
+    top: -30px;
+    height: 175px;
+    @include media-breakpoint-down(lg){
+      top: -10px;
+    }
+    @include media-breakpoint-down(md){
+      top: -25px;
+    }
+  }
+  .kl-bg-bottom-contact{
+    position: absolute;
+    right: 0;
+    bottom: -90%;
+    @include media-breakpoint-down(lg){
+      bottom: -100%;
+    }
+  }
+}
+
+.kl-content-contact-end{
+  h1{
+    @extend .kl-svg-fleur-title;
+    font-size: 48px;
+    font-weight: $semi_bold;
+    line-height: 1.5;
+    margin: 12px auto 92px;
+    @include media-breakpoint-down(md){
+        font-size: 32px;
+        margin-bottom: 52px;
+    }
+    &:after{
+      right: -10px;
+      top: -15px;
+    }
+    strong{
+      color: $red;
+      font-weight: $semi_bold !important;
+    }
+  }
+  p{
+    font-size: 24px;
+    font-weight: $regular;
+    margin: 0;
+    text-align: center;
+    color: $black;
+  }
+}

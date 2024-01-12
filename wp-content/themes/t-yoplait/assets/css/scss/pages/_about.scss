@@ -1,0 +1,57 @@
+.kl-section-about-territory{
+  padding: 100px 0 85px;
+  @include media-breakpoint-down(lg){
+    padding: 40px 0 30px;
+  }
+}
+
+.kl-section-about-fabrication{
+  padding: 80px 0 65px;
+  @include media-breakpoint-down(xl){
+    padding: 30px 0;
+  }
+}
+
+.kl-img-radius-content{
+  img{
+    border-radius: 10px;
+  }
+}
+
+.kl-section-about-stats{
+  padding: 60px 0;
+  @include media-breakpoint-down(xl){
+    padding: 30px 0;
+  }
+}
+
+.kl-section-about-production{
+  padding: 85px 0;
+  @include media-breakpoint-down(xl){
+    padding: 50px 0;
+  }
+}
+
+.kl-map-pin-link{
+  cursor: pointer;
+}
+
+.kl-map-content{
+  position: relative;
+  z-index: 1;
+  .kl-decor-flowers{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 75%;
+    transform: translate(-50%, -75%);
+    @include media-breakpoint-down(xl){
+      max-width: 75px;
+      transform: translate(0%, -75%);
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 50px;
+      transform: translate(0%, 0);
+    }
+  }
+}

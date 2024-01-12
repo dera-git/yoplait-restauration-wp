@@ -1,0 +1,12 @@
+$var_gutter : 24px;
+@include media-breakpoint-up(xl){
+    .kl-container-898{
+        max-width: calc(898px + #{$var_gutter});
+    }
+    .kl-container-1112{
+        max-width: calc(1112px + #{$var_gutter});
+    }
+    .kl-container-1140{
+        max-width: calc(1140px + #{$var_gutter});
+    }
+}

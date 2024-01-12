@@ -1,0 +1,370 @@
+.kl-form-label,
+.kl-form-modif label {
+    color: $black_primary;
+    font-size: 16px !important;
+    font-weight: $semi_bold !important;
+    line-height: 1;
+    margin-bottom: 8px !important;
+}
+.kl-form-control,
+.kl-form-modif input,
+.kl-modif-textarea textarea {
+    border: 1px solid $gray_tertiary;
+    border-radius: 8px;
+    color: $gray_secondary;
+    font-size: 16px !important;
+    font-weight: $regular;
+    padding: 15.2px 16px !important;
+    &:focus {
+        color: $gray_secondary;
+        border-color: $yellow;
+        box-shadow: none;
+        ~ .kl-input-group-text {
+            border-color: $yellow;
+        }
+    }
+    &:focus-visible{
+        outline: none !important;
+    }
+    &[type=email] {
+        text-decoration: underline;
+    }
+    &[type='password'] {
+        color: $black_primary;
+        font-family: Verdana;
+        font-size: 22px;
+        padding: 10.7px 16px;
+        &::-ms-reveal,
+        &::-ms-clear {
+            display: none;
+        }
+    }
+    &.kl-textarea{
+        min-height: 120px;
+    }
+}
+.kl-input-group-password {
+    position: relative;
+    .kl-icon-eye {
+        background: url(../img/icon/eye-slash.svg) no-repeat center;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        &.show {
+            background-image: url(../img/icon/eye.svg);
+        }
+    }
+}
+.kl-input-group-text {
+    border-color: $gray_tertiary;
+    border-radius: 0 8px 8px 0;
+    background-color: transparent;
+}
+.kl-form-check-input {
+    border-color: $gray_tertiary;
+    &:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 0.1rem rgba($yellow, 35%);
+    }
+    &:checked {
+        &[type=checkbox] {
+            background-color: transparent;
+            border-color: transparent;
+            background-image: url(../img/icon/checkbox.svg);            
+        }
+    }
+}
+.kl-form-check-square {
+    padding-left: 36px;
+    .kl-form-check-input {
+        border-color: #C7C7C7;
+        border-radius: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin-left: -36px;
+        &::after {
+            content: "";
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid $white;
+            width: 100%;
+            height: 100%;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &:checked {
+            &[type=checkbox] {
+                background-image: none;
+                border-color: $red;
+                &::after {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+    .kl-form-check-label {
+        cursor: pointer;
+    }
+}
+
+.kl-dropdown-select {
+    + .select2-container {
+        z-index: 999;
+    }
+}
+.select2-container--default {
+    .kl-select2-selection--single {
+        background: $white;
+        border: none;
+        border-radius: 100px !important;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        height: 50px;
+        .select2-selection__rendered {
+            color: $black;
+            line-height: 50px;
+            padding-left: 30px;
+            padding-right: 40px;
+        }
+        .select2-selection__placeholder {
+            color: $black;
+        }
+        .select2-selection__arrow {
+            background: url(../img/icon/arrow-dropdown-select.svg) no-repeat center;
+            width: 17px;
+            height: 10px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+            b {
+                display: none;
+            }
+        }
+        .select2-selection__clear {
+            height: 50px;
+            margin-right: 50px;
+            + .select2-selection__rendered {
+                padding-right: 0;
+            }
+        }
+    }
+    &.select2-container--open {
+        .kl-select2-selection--single {
+            .select2-selection__arrow {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}
+.kl-dropdown-parent {
+    position: relative;
+    z-index: 998;
+    > .select2-container {
+        top: -25px !important;
+        @include media-breakpoint-down(md) {
+            margin-top: -25px;
+            position: relative !important;
+            top: 0 !important;
+        }
+    }
+    .select2-dropdown {
+        background: #FFFFFF;
+        border-radius: 0 0 20px 20px;
+        border: none;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        padding-top: 37px;
+        padding-bottom: 15px;
+        @include media-breakpoint-down(md) {
+            position: static;
+        }
+    }
+    .select2-results__option {
+        padding: 4px 30px;
+    }
+    .select2-results__option--selected {
+        background-color: $white;
+        color: #505050;
+    }
+    .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: transparent;
+        color: #505050;
+    }
+}
+
+//new select multiple
+.custom-dropdown {
+    position: relative;
+    font-size: 16px;
+    color: $black;
+  
+    .custom-dropdown-list {
+        padding: 40px 30px 24px;
+        background: $white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 20px 20px;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        right: 0px;
+        transform-origin: 50% 0;
+        transform: scale(1, 0);
+        overflow-y: auto;
+        z-index: 998;
+        @include media-breakpoint-down(md) {
+            display: none;
+            position: static;
+            margin-top: -25px;
+            transform: none;
+            transform-origin: initial;
+        }
+        @media (max-height: 550px) {
+            max-height: 66vh;
+        }
+    }
+    
+    .custom-dropdown-option {
+        display: block;
+        padding: 0 0 8px;
+        opacity: 0;
+        transition: opacity .15s ease-in-out;
+    }
+    
+    .custom-dropdown-label {
+        display: block;
+        height: 50px;
+        background: $white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 100px;
+        padding: 0 40px 0 30px;
+        line-height: 50px;
+        font-size: 16px;
+        color: $black_primary;
+        cursor: pointer;        
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        z-index: 999;
+        &.has-value {
+            color: $black_primary;
+        }
+        &:before {
+            content: "";
+            background: url(../img/icon/arrow-dropdown-select.svg) no-repeat center;
+            width: 17px;
+            height: 10px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    
+    &.on {
+        .custom-dropdown-list {
+            transform: scale(1, 1);
+            transition-delay: 0s;
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+        
+            .custom-dropdown-option {
+                opacity: 1;
+                transition-delay: .2s;
+            }
+        }
+      
+        .custom-dropdown-label {
+            &:before {
+                color: $green_secondary;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+    
+    [type="checkbox"] {
+        position: relative;
+        top: -1px;
+        margin-right: 4px;
+    }
+    .kl-form-check {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .kl-form-check-black {
+        .kl-form-check-label {
+            color: rgba($black_primary, 0.7)
+        }
+    }
+    .kl-form-check-label::before {
+        padding: 7.5px;
+        left: -28px;
+        top: 3px;
+    }
+    .kl-form-check-input:not(.kl-form-radio).kl-new-check:checked + label::after {
+        background-size: contain;
+        top: 4px;
+        left: -25px;
+        width: 11px;
+    }
+}
+.kl-form-modif input,
+.kl-modif-textarea textarea{
+    appearance: none;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    background: transparent !important;
+    opacity: 1;
+}
+.kl-modif-textarea textarea{
+    min-height: 120px;
+}
+.kl-form-modif label{
+    .gfield_required_text{
+        font-size: 0;
+        position: relative;
+        &::after{
+            content: '*';
+            color: $red;
+            font-size: 16px !important;
+            font-weight: $semi_bold;
+        }
+    }
+}
+body .gform_wrapper .gform_title {
+    display: none !important;
+}
+.kl-form-contact{
+    .gform_body{
+        .gform_fields{
+            grid-column-gap: 24px !important;
+            grid-row-gap: 25px !important;
+        }
+    }
+    .gform_footer{
+        .gform_button{
+            @extend .kl-btn-default;
+            @extend .kl-btn-secondary;
+            background: $red !important;
+            &:hover{
+                background: #9c0009 !important;
+            }
+        }
+    }
+    .gfield_description.validation_message {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+    }
+    .instruction.validation_message{
+        display: none !important;
+    }
+}

@@ -1,0 +1,196 @@
+.kl-sect-gamme-panier{
+    margin-top: 70px;
+    padding: 10px 0 70px;
+    background: $white_primary;
+    position: relative;
+    @include media-breakpoint-down(md){
+        padding: 44px 0 0;
+        margin-top: 0;
+    }
+    &::after{
+        content: "";
+        background: url(../img/gamme_pannier/bg_bottom.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 49px;
+        bottom: -49px;
+    }
+    &::before{
+        content: "";
+        background: url(../img/gamme_pannier/bg_top.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 94px;
+        top: -94px;
+    }
+    .kl-content-text{
+        @include media-breakpoint-down(md){
+            padding: 0 22px;
+        }
+    }
+    .kl-title-section{
+        margin-top: -18px;
+        @include media-breakpoint-down(md){
+            margin-top: 38px;
+        }
+    }
+    .kl-content-text{
+        p{
+            font-weight: $medium;
+            span{
+                font-weight: $semi_bold;
+            }
+        }
+    }
+}
+.kl-flower-gamme-panier{
+    position: absolute;
+    bottom: -96px;
+    right: 0;
+    height: 235px;
+    overflow: hidden;
+    z-index: 3;
+    @include media-breakpoint-down(lg){
+        bottom: -118px;
+        height: 115px;
+        max-width: 90px;
+    }
+    @include media-breakpoint-down(md){
+        position: relative;
+        width: fit-content;
+        margin-left: auto;
+        max-width: 110px;
+        height: 135px;
+        bottom: -38px;
+    }
+}
+.kl-sect-list-product{
+    padding: 120px 0 40px;
+    .kl-title-desc{
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+    }
+    .kl-right-product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 297px/*490px*/;
+        height: 100%;
+        position: relative;
+        background: url(../img/gamme_pannier/bg_svg.svg);
+        background-repeat: no-repeat;
+        background-size: 249px;
+        background-position: center;
+        margin-top: -20px;
+        @include media-breakpoint-down(xl){
+            background-size: contain;
+        }
+        @include media-breakpoint-down(md){
+            min-height: 245px;
+            margin-top: 0;
+        }
+        .kl-content-img-product{
+            max-width: 340px;
+            width: 100%;
+            text-align: center;
+            @include media-breakpoint-down(md){
+                max-width: 245px;
+            }
+            img{
+                max-width: 195px;
+            }
+        }
+    }
+    .kl-content-btn-product{
+        /*margin-top: 60px;*/
+        display: flex;
+        justify-content: center;
+        @include media-breakpoint-down(md){
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+        .kl-btn-default{
+            max-width: 287px;
+            font-size: 16px;
+            width: 100%;
+            padding: 6px 48px;
+            @include media-breakpoint-down(lg){
+                font-size: 14px;
+            }
+            @include media-breakpoint-down(md){
+                font-size: 20px;
+                max-width: 308px;
+                padding: 10px 48px;
+            }
+        }
+        .kl-svg-btn{
+            left: 5px;
+        }
+    }
+    .kl-content-text{
+        p{
+            font-weight: $medium;
+        }
+    }
+    .kl-last-italic{
+        p{
+            &:last-child{
+                font-style: italic;
+            }
+        }
+    }
+}
+.kl-strong-500{
+    strong{
+        font-weight: $medium !important;
+    }
+}
+.kl-decor-flower-1{
+    position: relative;
+    &::after{
+        content: "";
+        background: url(../img/gamme_pannier/flower1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 96px;
+        height: 98px;
+        bottom: -98px;
+        right: 40px;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+}
+.kl-product-item{
+    margin-bottom: 150px;
+    @media (max-width: 360px) {
+        margin-bottom: 200px;
+    }
+    &:last-child{
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 140px;
+        }
+        @media (max-width: 360px) {
+            margin-bottom: 180px;
+        }
+    }
+}
+.kl-wrapper-item{
+    margin-bottom: 65px;
+}
+.kl-btn-red-v2{
+	a{
+		min-height:60px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+}

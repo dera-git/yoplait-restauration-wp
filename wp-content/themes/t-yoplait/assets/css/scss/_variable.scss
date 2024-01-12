@@ -1,0 +1,124 @@
+//color
+$white: #FFFFFF;
+$white_primary: #FFF6F7;
+$pink_primary: #FFF4F5;
+$black: #000000;
+$black_primary: #221F20;
+$black_secondary: #0C0C0C;
+$black_tertiary: #444444;
+$black_quaternary: #242424;
+$black_fifth: #222222;
+$red: #CF000C;
+$red_primary: #B7000B;
+$red_secondary: #A5000A;
+$yellow: #F4AD17;
+$yellow-primary: #FDECB2;
+$green: #43856A;
+$green_secondary:#337365;
+$orange_primary: #F08D52;
+$blue: #6DBFED;
+$blue-primary: #ECF7F1;
+$blue_secondary: #013B81;
+$gray: #6D6D6D;
+$gray_secondary: #757575;
+$gray_tertiary: #A9A9A9;
+$transparent: transparent;
+$pink: #FFF4F5;
+$black: #000;
+$gray_quaternary: #8e9499;
+$green_tertiary: #009a1c;
+
+$theme_colors: (
+        "white": $white,
+        "white-primary": $white_primary,
+        "black-primary": $black_primary,
+        "black-secondary": $black_secondary,
+        "black-tertiary": $black_tertiary,
+        "black-quaternary": $black_quaternary,
+        "black-fifth": $black_fifth,
+        "red": $red,
+        "red-primary": $red_primary,
+        "yellow": $yellow,
+        "green": $green,
+        "green-secondary": $green_secondary,
+        "orange-primary": $orange_primary,
+        "blue": $blue,
+        "blue-secondary": $blue_secondary,
+        "gray": $gray,
+        "gray-secondary": $gray_secondary,
+        "transparent": $transparent,
+        "pink": $pink,
+        "black": $black,
+        "gray-quaternary": $gray_quaternary,
+        "green-tertiary": $green_tertiary,
+);
+
+//Font family
+$font_first: 'Montserrat', sans-serif;
+$font_second: 'Poppins', sans-serif;
+$font_third: 'Lato', sans-serif;
+
+$font_family: (
+  "first": $font_first,
+  "second": $font_second,
+  "third": $font_third,
+);
+
+//Font-weight
+$regular: 400;
+$medium:500;
+$semi_bold: 600;
+$bold: 700;
+$extra_bold:800;
+$extra_bolder:900;
+
+$font_weight: (
+  "regular": $regular,
+  "medium": $medium,
+  "semi-bold": $semi_bold,
+  "bold": $bold,
+  "extra-bold": $extra_bold,
+  "extra-bolder": $extra_bolder,
+);
+
+//line-height
+$line_height_value: (
+  "0": 0,
+  "1_2": 1.2,
+  "1_25": 1.25,
+  "1_3": 1.3,
+  "1_5": 1.3,
+);
+
+//max value
+$max_value: (
+  "none": none,
+  "261": 261px,
+  "287": 287px,
+  "331": 331px,
+  "345": 345px,
+  "422": 422px,
+  "430": 430px,
+  "438": 438px,
+  "496": 496px,
+  "565": 565px,
+  "600": 600px,
+  "810": 810px,
+  "1005": 1005px,
+  "1038": 1038px,
+);
+
+$space_gutters_space : (
+        "0": 0px,
+        "10": 10px,
+        "24": 24px,
+        "30": 30px,
+        "40": 40px,
+        "50": 50px,
+        "60": 60px,
+        "100": 100px,
+        "117": 117px,
+        "125": 125px,
+);
+
+$grid-breakpoints: ( xxs:320px, xs:375px, xsm:480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl_1366: 1366px, xxl: 1400px, xxl_1440: 1440px, xxl_1600: 1600px);

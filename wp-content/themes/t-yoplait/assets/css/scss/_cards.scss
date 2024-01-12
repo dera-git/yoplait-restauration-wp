@@ -1,0 +1,139 @@
+.kl-card-plan{
+  .kl-icon{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px
+  }
+  .kl-title{
+    @include text_20;
+    margin-bottom: 15px;
+    font-weight: $semi_bold;
+  }
+  .kl-description{
+    @include text_16;
+    margin-bottom: 30px;
+  }
+}
+
+.kl-card-actus{
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: $black_fifth;
+  transition: all ease 0.5s;
+  &:hover{
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    .kl-arrow-right{
+      transform: translateX(5px);
+    }
+  }
+  .kl-card-header{
+    height: 180px;
+    overflow: hidden;
+    .kl-img-header{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .kl-date{
+    font-size: 13px;
+    line-height: 1.3em;
+    font-family: $font_first;
+    font-weight: $medium;
+    margin-bottom: 20px;
+  }
+  .kl-arrow-right{
+    transition: all ease 0.5s;
+  }
+  .kl-description{
+    @include text_18;
+    font-weight: $semi_bold;
+    line-height: 1.4em;
+    margin-bottom: 22px;
+  }
+  .kl-card-body{
+    padding: 13px 19px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  @include media-breakpoint-down(sm){
+    .kl-card-header{
+      height: auto;
+      min-height: 180px;
+    }
+  }
+}
+
+.kl-card-recette {
+  background-color: $pink_primary;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  a:hover & {
+    background-color: darken($pink_primary, 2%);
+    transform: translateY(-8px);
+  }
+}
+.kl-card-recette-img {
+  height: 221px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.kl-card-recette-body {
+  padding: 16px 24px 21px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  h5 {
+    color: $black_primary;
+    font-weight: $medium;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .kl-card-recette-infos {
+    margin-top: auto;
+  }
+}
+.kl-card-recette-infos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .kl-recette-info {
+    margin-right: 28px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.kl-recette-info {
+  color: $black_primary;
+  font-size: 20px;
+  font-weight: $medium;
+  line-height: 1.5;
+}
+.kl-card-recette-footer {
+  background-color: $red;
+  color: $white;
+  display: flex;
+  align-items: center;
+  font-family: $font_first;
+  font-weight: $medium;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-top: auto;
+  padding: 19px 27px;
+}

@@ -1,0 +1,542 @@
+.kl-sect-hero{
+    .kl-hero-items{
+        position: relative;
+        &::after{
+            content: "";
+            background: url(../img/home/Maskgroup.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: -140px;
+            width: 100%;
+            height: 226px;
+            @include media-breakpoint-down(xl){
+                bottom: -155px;
+                background-size: auto;
+            }
+        }
+        .kl-hero-item{
+            max-height: 720px;
+            height: 100%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.kl-sect-extract-gamme{
+    padding: 55px 0 115px;
+    position: relative;
+    z-index: 9;
+    @include media-breakpoint-down(md){
+        padding: 25px 0 25px;
+    }
+    &::after{
+        content: "";
+        background: url(../img/home/Flower3.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 234px;
+        height: 229px;
+        position: absolute;
+        bottom: -70px;
+        right: 0;
+        z-index: 1;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+}
+.kl-list-extract-gamme{
+    position: relative;
+    padding: 50px 0 200px;
+    @include media-breakpoint-down(md){
+        padding: 50px 0 0;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        background: url(../img/home/Flower.svg);
+        top: 0;
+        left: -12px;
+        width: 113px;
+        height: 115px;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+}
+
+.kl-sect-gamme{
+    padding: 15px 0 0;
+    position: relative;
+    @include media-breakpoint-down(md){
+        padding: 15px 0 15px;
+    }
+    &::before{
+        content: "";
+        background: url(../img/home/corb-top.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        top: -40px;
+        @include media-breakpoint-down(md){
+            background-size: cover;
+            background-position-x: center;
+        }
+    }
+    &::after{
+        content: "";
+        background: url(../img/home/corb-bottom.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 153px;
+        position: absolute;
+        bottom: -92px;
+        z-index: -1;
+        @include media-breakpoint-down(md){
+            background-size: cover;
+            background-position-x: center;
+            bottom: -70px;
+        }
+    }
+    .container{
+        position: relative;
+        &::after{
+            content: "";
+            background: url(../img/home/Flower2.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: -45px;
+            left: -12px;
+            width: 87px;
+            height: 103px;
+            @include media-breakpoint-down(md){
+                display: none;
+            }
+        }
+    }
+    .kl-btn-sect-gamme{
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        .kl-btn-default{
+            font-size: 16px;
+            max-width: 356px;
+            width: 100%;
+            @include media-breakpoint-down(md){
+                font-size: 20px;
+            }
+        }
+    }
+    .kl-title-gamme{
+        margin-bottom: 88px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 58px;
+        }
+    }
+}
+.kl-sect-cooperative{
+    padding: 150px 0 110px;
+    .kl-title-cooperative{
+        margin-bottom: 45px;
+        @include media-breakpoint-down(md){
+            text-align: center;
+            margin-bottom: 64px;
+        }
+    }
+}
+
+/*Card*/
+.kl-card-extract-gamme{
+    @include media-breakpoint-down(md) {
+        margin-bottom: 90px;
+    }
+    .kl-card-extract-gamme-img{
+        text-align: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 100% !important;
+        padding: 10px;
+        margin: 0 auto 45px auto;
+        max-width: 384px;
+        min-height: 375px;
+        @include media-breakpoint-down(md){
+            margin: 0 auto 40px auto;
+            max-width: 324px;
+            min-height: 293px;
+        }
+        &.kl-bg-img-1{
+            background: url(../img/home/bg1.svg);
+        }
+        &.kl-bg-img-2{
+            background: url(../img/home/bg2.svg);
+        }
+    }
+    .kl-btn-default {
+        max-width: 282px;
+        width: 100%;
+        @include media-breakpoint-down(md){
+            max-width: 275px;
+        }
+    }
+}
+
+.kl-card-gamme{
+    text-decoration: none;
+    display: block;
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+    .kl-content-img-gamme{
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        .kl-img-gamme{
+            -webkit-mask-image: url(../img/home/mask.svg);
+            mask-image: url(../img/home/mask.svg);
+            -webkit-mask-position: 0px 0px;
+            mask-position: 0px 0px;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+        .kl-svg-gamme{
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .kl-card-gamme-title{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: $semi_bold;
+        transform: rotate(-19.5deg);
+        margin-bottom: 15px;
+    }
+}
+
+.kl-second-title{
+    h2{
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: $medium;
+        line-height: 36px;
+        margin: 0;
+        @include media-breakpoint-down(md){
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    h3{
+        font-size: 40px;
+        font-weight: $semi_bold;
+        line-height: 60px;
+        margin: 0;
+        @include media-breakpoint-down(md){
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}
+.kl-content-text{
+    font-family: $font_first;
+    p{
+        color: $black_secondary;
+    }
+}
+.kl-right-cooperation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @include media-breakpoint-down(md){
+        margin-top: 44px;
+    }
+    .kl-content-img-cooperation{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        .kl-svg-cooperation{
+            position: absolute;
+            z-index: -1;
+            right: -35px;
+            top: -10px;
+            @include media-breakpoint-down(lg){
+                max-width: 100%;
+                right: -15px;
+                top: -50px;
+            }
+            @include media-breakpoint-down(md){
+                top: -80px;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background: url(../img/home/arc_green.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 146px;
+            height: 100px;
+            bottom: -50px;
+            left: -20px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background: url(../img/home/Petale.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 175px;
+            height: 151px;
+            top: -10px;
+        }
+    }
+}
+.kl-img-cooperation{
+    -webkit-mask-image: url(../img/home/mask2.svg);
+    mask-image: url(../img/home/mask2.svg);
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    max-width: 418px;
+    width: 100%;
+    @include media-breakpoint-down(md){
+        max-width: 272px;
+    }
+}
+
+.kl-sect-stats{
+    padding: 70px 0;
+    @include media-breakpoint-down(md){
+        padding: 20px 0 140px;
+    }
+    .kl-content-text{
+        @include media-breakpoint-down(md){
+            padding: 0 5px;
+        }
+    }
+    .kl-btn-sect-stats{
+        display: flex;
+        justify-content: center;
+        margin-top: 54px;
+        @include media-breakpoint-down(md){
+            margin-top: 24px;
+        }
+        .kl-btn-default{
+            font-size: 16px;
+            padding: 13px 44px;
+            @include media-breakpoint-down(md){
+                font-size: 20px;
+                max-width: 300px;
+            }
+        }
+    }
+}
+.kl-card-stats{
+    text-align: center;
+    margin-bottom: 64px;
+    .kl-img-stats{
+        margin-bottom: 20px;
+        max-height: 100px;
+        min-height: 100px;
+        height: 100%;
+    }
+    .kl-card-stats-title{
+        font-family: $font_second;
+        h2{
+            font-size: 48px;
+            line-height: 72px;
+            font-weight: $semi_bold;
+            margin: 0;
+            color: $black_quaternary;
+        }
+    }
+    .kl-link-stats{
+        display: block;
+        text-decoration: none;
+        color: $blue_secondary;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: $bold;
+        margin-bottom: 16px;
+    }
+    .kl-content-text{
+        p{
+            margin: 0;
+            color: $gray;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+.kl-sect-appointment{
+    padding: 70px 0 75px;
+    background: url(../img/home/bg3.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 130px;
+    @include media-breakpoint-down(md){
+        padding: 70px 0 92px;
+        background-size: cover;
+    }
+    .kl-appointment-img{
+        position: relative;
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        img{
+            -webkit-mask-image: url(../img/home/mask3.svg);
+            mask-image: url(../img/home/mask3.svg);
+            -webkit-mask-position: 0px 0px;
+            mask-position: 0px 0px;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            max-width: 370px;
+            width: 100%;
+            @include media-breakpoint-down(md){
+                max-width: 305px;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background: url(../img/home/petale2.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 302px;
+            height: 230px;
+            top: -90px;
+            right: 0;
+        }
+    }
+    .kl-content-appointement{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 25px;
+        @include media-breakpoint-down(md){
+            padding-left: 0;
+        }
+        .kl-desc-appointment{
+            @include media-breakpoint-down(md){
+                margin-top: 60px;
+            }
+            p{
+                margin: 0;
+                color: $black_primary;
+                font-size: 20px;
+                font-weight: $semi_bold;
+                line-height: 24px;
+                @include media-breakpoint-down(md){
+                    margin-top: 30px;
+                }
+            }
+            .kl-btn-sect-appointment{
+                margin-top: 36px;
+                max-width: 260px;
+                @include media-breakpoint-down(md){
+                    margin-top: 60px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .kl-btn-default{
+                    font-size: 16px;
+                    @include media-breakpoint-down(md){
+                        font-size: 20px;
+                        padding: 10px 28px 10px 48px
+                    }
+                }
+            }
+        }
+    }
+}
+
+.kl-card-transition{
+    .kl-svg-gamme{
+        path{
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+.kl-card-colore-1{
+    color: $red !important;
+    .kl-svg-gamme{
+        path{
+            fill: $red !important;
+        }
+    }
+    &:hover{
+        color: darken($red, 10%) !important;
+        .kl-svg-gamme{
+            path{
+                fill: darken($red, 10%) !important;
+            }
+        }
+    }
+}
+.kl-card-colore-2{
+    color: $yellow !important;
+    .kl-svg-gamme{
+        path{
+            fill: $yellow !important;
+        }
+    }
+    &:hover{
+        color: darken($yellow, 10%) !important;
+        .kl-svg-gamme{
+            path{
+                fill: darken($yellow, 10%) !important;
+            }
+        }
+    }
+}
+.kl-card-colore-3{
+    color: $green !important;
+    .kl-svg-gamme{
+        path{
+            fill: $green !important;
+        }
+    }
+    &:hover{
+        color: darken($green, 10%) !important;
+        .kl-svg-gamme{
+            path{
+                fill: darken($green, 10%) !important;
+            }
+        }
+    }
+}
+.kl-card-colore-4{
+    color: $orange_primary !important;
+    .kl-svg-gamme{
+        path{
+            fill: $orange_primary !important;
+        }
+    }
+    &:hover{
+        color: darken($orange_primary, 10%) !important;
+        .kl-svg-gamme{
+            path{
+                fill: darken($orange_primary, 10%) !important;
+            }
+        }
+    }
+}
